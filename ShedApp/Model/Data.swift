@@ -17,6 +17,18 @@ final class GraphQLData: ObservableObject {
     
     
     init() {
+        Network.shared.apollo.perform(mutation: LoginMutation(username: "testUser", password: "testPassword")) { result in
+            switch result {
+            case .success(let result):
+                print(result)
+                if let token = result.data?.login?.token {
+                    let keychain = KeychainSwift()
+                    keychain.set(token, forKey: "authToken")
+                }
+            case .failure(let error):
+                print("Error from server: \(error)")
+            }
+        }
         Network.shared.apollo.fetch(query: GetSubjectsQuery())  { result in
             switch result {
             case .success(let result):
