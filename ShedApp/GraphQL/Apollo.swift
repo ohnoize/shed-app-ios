@@ -39,10 +39,8 @@ class CustomInterceptor: ApolloInterceptor {
         request: HTTPRequest<Operation>,
         response: HTTPResponse<Operation>?,
         completion: @escaping (Swift.Result<GraphQLResult<Operation.Data>, Error>) -> Void) {
-        let keychain = KeychainSwift()
-        if let token = keychain.get("TOKEN_HERE") {
-            request.addHeader(name: "Authorization", value: token)
-        }
+        let token = "TOKEN HERE"
+        request.addHeader(name: "Authorization", value: token)
         print("request :\(request)")
         print("response :\(String(describing: response))")
 

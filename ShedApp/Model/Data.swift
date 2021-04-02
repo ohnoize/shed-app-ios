@@ -8,11 +8,13 @@
 import Foundation
 import Combine
 import Apollo
+import KeychainSwift
 
 final class GraphQLData: ObservableObject {
     @Published var subjects = [GetSubjectsQuery.Data.AllSubject]()
     @Published var sessions = [GetSessionsQuery.Data.AllSession]()
     @Published var currentUser = [CurrentUserQuery.Data.Me]()
+    
     
     init() {
         Network.shared.apollo.fetch(query: GetSubjectsQuery())  { result in
@@ -45,28 +47,5 @@ final class GraphQLData: ObservableObject {
                 print("GraphQL Error: \(error)")
             }
         }
-    }
-}
-
-
-func load<T: Decodable>(_ filename: String) -> T {
-    let data: Data
-    
-    guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
-    }
-    
-    do {
-        data = try Data(contentsOf: file)
-    } catch {
-        fatalError("Couldn't load \(filename) from main bundle: \n\(error)")
-    }
-    
-    do {
-        let decoder = JSONDecoder()
-        return try decoder.decode(T.self, from: data)
-    } catch {
-        fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
