@@ -38,7 +38,7 @@ class CustomInterceptor: ApolloInterceptor {
         request: HTTPRequest<Operation>,
         response: HTTPResponse<Operation>?,
         completion: @escaping (Swift.Result<GraphQLResult<Operation.Data>, Error>) -> Void) {
-        request.addHeader(name: "Authorization", value: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9sbGkiLCJpZCI6IjYwNDI4YTM1NzdmMzNjMDAxNWUzZjllZCIsImlhdCI6MTYxNzI5MzYxNiwiZXhwIjoxNjE3MzM2ODE2fQ.MoCl_SaaydRqJ_dfosLlEKAYs6NdJb7Kj_84iSRAnQQ")
+        request.addHeader(name: "Authorization", value: ProcessInfo.processInfo.environment["env-token"]!)
         
         print("request :\(request)")
         print("response :\(String(describing: response))")

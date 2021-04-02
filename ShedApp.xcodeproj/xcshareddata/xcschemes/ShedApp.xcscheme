@@ -50,6 +50,13 @@
             ReferencedContainer = "container:ShedApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "env-token"
+            value = "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im9sbGkiLCJpZCI6IjYwNDI4YTM1NzdmMzNjMDAxNWUzZjllZCIsImlhdCI6MTYxNzMzMjcyMCwiZXhwIjoxNjE3Mzc1OTIwfQ.8-dFx9dy7a-dOGC31YPTM7ItwYKCKIXotCmeZ3As-Lc"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
