@@ -20,7 +20,12 @@ struct AddNewGoal: View {
         print("ADD GOALLL")
         let userID = graphQLData.currentUser.compactMap({ $0.id })
         let seconds = hours * 3600
-        let deadline: String = ISO8601DateFormatter().string(from: date)
+        let dateFormatter: ISO8601DateFormatter = {
+            let df = ISO8601DateFormatter()
+            df.formatOptions = [.withFullDate, .withFullTime, .withFractionalSeconds]
+            return df
+        }()
+        let deadline: String = dateFormatter.string(from: date)
         let addGoalInput = goalInput(description: description, subject: subject, targetTime: seconds, deadline: deadline)
         Network.shared.apollo.perform(mutation: AddGoalMutation(id: userID[0], goal: addGoalInput))
         description = ""

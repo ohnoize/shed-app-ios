@@ -9,10 +9,11 @@ import SwiftUI
 
 struct SubjectList: View {
     @ObservedObject var graphQLData = GraphQLData()
+    @State var currentUser = [CurrentUserQuery.Data.Me]()
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(graphQLData.currentUser, id: \.id) { user in
+                ForEach(currentUser, id: \.id) { user in
                     if let subjects = user.mySubjects?.compactMap { $0 } {
                         ForEach(subjects, id: \.subjectName) { subject in
                             SubjectRow(subject: subject)
@@ -25,6 +26,18 @@ struct SubjectList: View {
                 Button(action: { print("ADD SUBJECT") }) {
                     Image(systemName: "plus.circle")
                         .accessibilityLabel("Add subject")
+                }
+            }
+        }
+        .onAppear {
+            Network.shared.apollo.fetch(query: CurrentUserQuery(), cachePolicy: .fetchIgnoringCacheCompletely)  { result in
+                switch result {
+                case .success(let result):
+                    if let userConnection = result.data?.me {
+                        currentUser = [userConnection].compactMap { $0 }
+                    }
+                case .failure(let error):
+                    print("GraphQL Error: \(error)")
                 }
             }
         }
