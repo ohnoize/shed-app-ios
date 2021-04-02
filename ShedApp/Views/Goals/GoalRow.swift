@@ -16,7 +16,7 @@ struct GoalRow: View {
                     .font(.title)
                     .padding(.bottom, 10)
                 Text(goal.subject)
-                Text("Time left: \(goal.elapsedTime)")
+                Text("Time left: \(TimeParser(seconds: (goal.targetTime - goal.elapsedTime)))")
                 Text("Deadline: \(DateParser(dateString: goal.deadline!))")
             }
             .padding()

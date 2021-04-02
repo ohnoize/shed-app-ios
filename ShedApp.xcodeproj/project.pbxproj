@@ -15,6 +15,7 @@
 		F20B7CD3261275FA0076A843 /* TimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CD2261275FA0076A843 /* TimeParser.swift */; };
 		F20B7CDB26127F3A0076A843 /* MainTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CDA26127F3A0076A843 /* MainTimer.swift */; };
 		F20B7CDF261281470076A843 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CDE261281470076A843 /* Account.swift */; };
+		F23520252617CB9F00C83B15 /* AddNewGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23520242617CB9F00C83B15 /* AddNewGoal.swift */; };
 		F23C5F4D261286C800EFBC40 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4C261286C800EFBC40 /* Goals.swift */; };
 		F23C5F50261286E400EFBC40 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4F261286E400EFBC40 /* History.swift */; };
 		F23C5F5826128B7400EFBC40 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5726128B7400EFBC40 /* Subject.swift */; };
@@ -46,6 +47,7 @@
 		F20B7CD2261275FA0076A843 /* TimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeParser.swift; sourceTree = "<group>"; };
 		F20B7CDA26127F3A0076A843 /* MainTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimer.swift; sourceTree = "<group>"; };
 		F20B7CDE261281470076A843 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		F23520242617CB9F00C83B15 /* AddNewGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGoal.swift; sourceTree = "<group>"; };
 		F23C5F4C261286C800EFBC40 /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		F23C5F4F261286E400EFBC40 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		F23C5F5726128B7400EFBC40 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
@@ -129,14 +131,23 @@
 				F20B7CBE26126A930076A843 /* ContentView.swift */,
 				F20B7CDA26127F3A0076A843 /* MainTimer.swift */,
 				F20B7CDE261281470076A843 /* Account.swift */,
-				F23C5F4C261286C800EFBC40 /* Goals.swift */,
-				F24762FA2616625A000F23CD /* GoalRow.swift */,
+				F23520222617CB8D00C83B15 /* Goals */,
 				F23C5F4F261286E400EFBC40 /* History.swift */,
 				F23C5F5D26128C6800EFBC40 /* SubjectList.swift */,
 				F24762F726165EF6000F23CD /* SubjectRow.swift */,
 				F2ACBE16261404D9005EE885 /* SessionRow.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F23520222617CB8D00C83B15 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				F23C5F4C261286C800EFBC40 /* Goals.swift */,
+				F24762FA2616625A000F23CD /* GoalRow.swift */,
+				F23520242617CB9F00C83B15 /* AddNewGoal.swift */,
+			);
+			path = Goals;
 			sourceTree = "<group>";
 		};
 		F23C5F5626128B6500EFBC40 /* Model */ = {
@@ -275,6 +286,7 @@
 				F2A6F4302613D0AA00C529C1 /* LocalNotificationManager.swift in Sources */,
 				F2A6F4332613EFF900C529C1 /* Session.swift in Sources */,
 				F20B7CBD26126A930076A843 /* ShedAppApp.swift in Sources */,
+				F23520252617CB9F00C83B15 /* AddNewGoal.swift in Sources */,
 				F23C5F5B26128BFE00EFBC40 /* Data.swift in Sources */,
 				F23C5F5E26128C6800EFBC40 /* SubjectList.swift in Sources */,
 				F23C5F5826128B7400EFBC40 /* Subject.swift in Sources */,
