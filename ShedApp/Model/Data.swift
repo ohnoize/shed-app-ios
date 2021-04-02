@@ -29,31 +29,31 @@ final class GraphQLData: ObservableObject {
                 print("Error from server: \(error)")
             }
         }
-        Network.shared.apollo.fetch(query: GetSubjectsQuery())  { result in
+        Network.shared.apollo.fetch(query: GetSubjectsQuery())  { [weak self] result in
             switch result {
             case .success(let result):
                 if let subjectsConnection = result.data?.allSubjects {
-                    self.subjects = subjectsConnection.compactMap { $0 }
+                    self?.subjects = subjectsConnection.compactMap { $0 }
                 }
             case .failure(let error):
                 print("GraphQL error: \(error)")
             }
         }
-        Network.shared.apollo.fetch(query: GetSessionsQuery())  { result in
+        Network.shared.apollo.fetch(query: GetSessionsQuery())  { [weak self] result in
             switch result {
             case .success(let result):
                 if let sessionsConnection = result.data?.allSessions {
-                    self.sessions = sessionsConnection.compactMap { $0 }
+                    self?.sessions = sessionsConnection.compactMap { $0 }
                 }
             case .failure(let error):
                 print("GraphQL Error: \(error)")
             }   
         }
-        Network.shared.apollo.fetch(query: CurrentUserQuery())  { result in
+        Network.shared.apollo.fetch(query: CurrentUserQuery(), cachePolicy: .fetchIgnoringCacheCompletely)  { [weak self] result in
             switch result {
             case .success(let result):
                 if let userConnection = result.data?.me {
-                    self.currentUser = [userConnection].compactMap { $0 }
+                    self?.currentUser = [userConnection].compactMap { $0 }
                 }
             case .failure(let error):
                 print("GraphQL Error: \(error)")

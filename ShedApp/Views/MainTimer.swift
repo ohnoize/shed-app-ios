@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainTimer: View {
     @ObservedObject var stopWatchManager = StopWatchManager()
-    @ObservedObject var graphQLData = GraphQLData()
+    @EnvironmentObject var graphQLData: GraphQLData
     @ObservedObject var notificationManager = LocalNotificationManager()
     
     struct SessionSubject: Identifiable, Hashable {
@@ -70,13 +70,17 @@ struct MainTimer: View {
             let input = sessionSubjectInput(name: subject.name, length: subject.length)
             subjectsInput.append(input)
         }
+        let userID = graphQLData.currentUser.compactMap({ $0.id })
 
         Network.shared.apollo.perform(
             mutation: AddSessionMutation(
                 totalLength: practiceTime.totalTime,
                 individualSubjects: subjectsInput,
                 notes: practiceTime.notes,
-                userID: "60428a3577f33c0015e3f9ed"))
+                userID: userID[0]
+            )
+        )
+        
         practiceTime.individualSubjects = []
         practiceTime.notes = ""
         practiceTime.totalTime = 0
@@ -175,5 +179,6 @@ struct MainTimer: View {
 struct MainTimer_Previews: PreviewProvider {
     static var previews: some View {
         MainTimer()
+            .environmentObject(GraphQLData())
     }
 }

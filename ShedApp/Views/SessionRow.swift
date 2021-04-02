@@ -7,20 +7,7 @@
 
 import SwiftUI
 
-let inDateFormatter = ISO8601DateFormatter()
-let outDateFormatter: DateFormatter = {
-        let df = DateFormatter()
-        df.dateFormat = "dd-MM-yyyy"
-        df.locale = Locale(identifier: "en_US_POSIX")
-        return df
-}()
 
-func dateParser(dateString: String) -> String {
-    print(dateString)
-    let date: Date? = inDateFormatter.date(from: dateString)
-    let formattedString: String = outDateFormatter.string(from: date ?? Date())
-    return formattedString
-}
 
 
 struct SessionRow: View {
@@ -29,7 +16,7 @@ struct SessionRow: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(DateParser(dateString:session.date))
+                Text(DateParser(dateString: session.date))
                     .font(.title)
                     .padding(.bottom, 10)
                 Text("Length: \(TimeParser(seconds: session.totalLength!))")

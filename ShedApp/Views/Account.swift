@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Account: View {
-    @ObservedObject var graphQLData = GraphQLData()
+    @EnvironmentObject var graphQLData: GraphQLData
     var body: some View {
         NavigationView {
             ScrollView {
@@ -35,5 +35,6 @@ struct Account: View {
 struct Account_Previews: PreviewProvider {
     static var previews: some View {
         Account()
+            .environmentObject(GraphQLData())
     }
 }
