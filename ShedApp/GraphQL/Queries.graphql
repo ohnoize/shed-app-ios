@@ -1,0 +1,103 @@
+query getSubjects {
+    allSubjects {
+        id
+        name
+        description
+        timePracticed
+        links {
+            url
+            description
+        }
+    }
+}
+
+query getUsers {
+    allUsers {
+        id
+        username
+        instrument
+        joined
+        goals {
+            id
+            description
+            subject
+            targetTime
+            elapsedTime
+            deadline
+            passed
+        }
+        mySubjects {
+            subjectID
+            subjectName
+            timePracticed
+            subjectNotes {
+                date
+                notes
+            }
+        }
+        sessions {
+            id
+            date
+            totalLength
+            notes
+            userID
+            individualSubjects {
+                name,
+                length
+            }
+        }
+    }
+}
+
+query getSessions($userID:String){
+    allSessions(userID: $userID) {
+        id
+        date
+        totalLength
+        notes
+        userID
+        individualSubjects {
+            name,
+            length
+        }
+    }
+}
+
+ query currentUser {
+    me {
+        id
+        username
+        instrument
+        timePracticed
+        joined
+        goals {
+            id
+            description
+            subject
+            targetTime
+            elapsedTime
+            deadline
+            passed
+        }
+        mySubjects {
+            subjectID
+            subjectName
+            timePracticed
+            subjectNotes {
+                date
+                notes
+            }
+        }
+        sessions {
+            id
+            date
+            totalLength
+            notes
+            userID
+            individualSubjects {
+                name,
+                length
+            }
+        }
+    }
+  }

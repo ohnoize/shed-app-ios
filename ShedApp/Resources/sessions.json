@@ -1,0 +1,114 @@
+[
+    {
+            "id": "6063db9465fd410015bcc4cc",
+            "date": "2021-03-31T02:16:52.071Z",
+            "totalLength": 20,
+            "individualSubjects": [
+              {
+                "name": "Bebop scales",
+                "length": 10
+              },
+              {
+                "name": "Wayne Shorter tunes",
+                "length": 10
+              }
+            ],
+            "notes": "New date format"
+    },
+    {
+        "id": "60428a8877f33c0015e3f9ee",
+        "date": "2021-03-05T20:16:11Z",
+        "totalLength": 41,
+        "individualSubjects": [
+          {
+            "name": "chords",
+            "length": 31
+          },
+          {
+            "name": "Bach sonatas",
+            "length": 10
+          }
+        ],
+        "notes": "Fun first session"
+      },
+      {
+        "id": "60428b7377f33c0015e3f9f1",
+        "date": "2021-01-05T20:19:11Z",
+        "totalLength": 1200,
+        "individualSubjects": [
+          {
+            "name": "chords",
+            "length": 1233
+          },
+          {
+            "name": "Bach sonatas",
+            "length": 122
+          }
+        ],
+        "notes": "test sesh"
+      },
+      {
+        "id": "60428c1b77f33c0015e3f9f7",
+        "date": "2020-03-05T20:16:11Z",
+        "totalLength": 8,
+        "individualSubjects": [
+          {
+            "name": "Test subject",
+            "length": 8
+          }
+        ],
+        "notes": ""
+      },
+      {
+        "id": "60429085e58f5600151bfe7e",
+        "date": "2021-02-05T20:16:11Z",
+        "totalLength": 10,
+        "individualSubjects": [
+          {
+            "name": "chords",
+            "length": 10
+          }
+        ],
+        "notes": ""
+      },
+      {
+        "id": "6042909be58f5600151bfe82",
+        "date": "2021-03-05T20:12:11Z",
+        "totalLength": 9,
+        "individualSubjects": [
+          {
+            "name": "chords",
+            "length": 9
+          }
+        ],
+        "notes": ""
+      },
+      {
+        "id": "604290d5e58f5600151bfe84",
+        "date": "2021-03-05T20:13:09Z",
+        "totalLength": 31,
+        "individualSubjects": [
+          {
+            "name": "Wayne Shorter tunes",
+            "length": 20
+          },
+          {
+            "name": "Modal harmony",
+            "length": 11
+          }
+        ],
+        "notes": "Good modal session"
+      },
+      {
+        "id": "6042a2614fa0f40015d8e12a",
+        "date": "2021-03-05T21:28:01Z",
+        "totalLength": 5,
+        "individualSubjects": [
+          {
+            "name": "Arpeggios",
+            "length": 5
+          }
+        ],
+        "notes": ""
+      },
+]

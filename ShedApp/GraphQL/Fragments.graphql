@@ -1,0 +1,53 @@
+  fragment SessionItems on Session {
+    id
+    date
+    totalLength
+    notes
+    userID
+    individualSubjects {
+      name,
+      length
+    }
+  }
+
+  fragment SubjectItems on Subject {
+    id
+    name
+    description
+    timePracticed
+    links {
+      url
+      description
+    }
+  }
+
+
+  fragment UserItems on User {
+    id
+    username
+    instrument
+    joined
+    goals {
+      id
+      description
+      subject
+      targetTime
+      elapsedTime
+      deadline
+      passed
+    }
+    mySubjects {
+      subjectID
+      subjectName
+      timePracticed
+      subjectNotes {
+        date
+        notes
+      }
+    }
+    sessions {
+      ...SessionItems
+    }
+  }
+
+

@@ -1,0 +1,116 @@
+[
+      {
+        "id": "6022a2cf1e57471d3cdd4b1a",
+        "name": "chords",
+        "description": "Practice chords",
+        "timePracticed": 54146
+      },
+      {
+        "id": "602d85082290af5340dff60c",
+        "name": "repertoire",
+        "description": "Learn/work on pieces",
+        "timePracticed": 10875
+      },
+      {
+        "id": "602daf862290af5340dff60d",
+        "name": "Arpeggios",
+        "description": "Study of chord tones played individually",
+        "timePracticed": 74
+      },
+      {
+        "id": "602db0d92290af5340dff611",
+        "name": "Bebop scales",
+        "description": "Eight note scales",
+        "timePracticed": 694
+      },
+      {
+        "id": "602db1522290af5340dff612",
+        "name": "Bach sonatas",
+        "description": "Violin sonatas by J.S. Bach",
+        "timePracticed": 110
+      },
+      {
+        "id": "602db3db2290af5340dff615",
+        "name": "Intervals",
+        "description": "Playing two notes at a time.",
+        "timePracticed": 25
+      },
+      {
+        "id": "602db47c2290af5340dff61a",
+        "name": "Triads",
+        "description": "Chords with three notes",
+        "timePracticed": 40
+      },
+      {
+        "id": "602ede3f2f630c7dfcbf385b",
+        "name": "Coltrane changes",
+        "description": "Changes of Giant Steps, Countdown, 26-2, etc.",
+        "timePracticed": 153
+      },
+      {
+        "id": "602ede8e2f630c7dfcbf385e",
+        "name": "Wayne Shorter tunes",
+        "description": "Songs composed by Wayne Shorter",
+        "timePracticed": 47
+      },
+      {
+        "id": "60302dc1cabf62866252ca4f",
+        "name": "Pentatonic patterns",
+        "description": "Patterns from pentatonic scales",
+        "timePracticed": 0
+      },
+      {
+        "id": "60304931eb44038a979abf3a",
+        "name": "Hexatonic scales",
+        "description": "Scales with 9 notes",
+        "timePracticed": 9
+      },
+      {
+        "id": "60304994eb44038a979abf3b",
+        "name": "Monk tunes",
+        "description": "Tunes by Thelonious Monk",
+        "timePracticed": 161
+      },
+      {
+        "id": "60304a1ceb44038a979abf3c",
+        "name": "Modal harmony",
+        "description": "Harmony based on modes",
+        "timePracticed": 50
+      },
+      {
+        "id": "60304adceb44038a979abf3d",
+        "name": "Counterpoint",
+        "description": "Study of moving voices",
+        "timePracticed": 0
+      },
+      {
+        "id": "603c12e6ac0ace00151d2d05",
+        "name": "Finger stuff",
+        "description": "Finger exercises",
+        "timePracticed": 9
+      },
+      {
+        "id": "6042a49e4fa0f40015d8e135",
+        "name": "Songwriting",
+        "description": "Writing songs",
+        "timePracticed": 66
+      },
+      {
+        "id": "6047ab72fa8c8e0015e24b9c",
+        "name": "Comping",
+        "description": "Accompanying on your instrument",
+        "timePracticed": 0
+      },
+      {
+        "id": "6047adebfa8c8e0015e24b9f",
+        "name": "Long tones",
+        "description": "Playing long tones to improve your sound",
+        "timePracticed": 20
+      },
+      {
+        "id": "605b6f53b5c280001543179b",
+        "name": "Chapter 2",
+        "description": "Steno briefs",
+        "timePracticed": 0
+      }
+]

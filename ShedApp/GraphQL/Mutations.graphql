@@ -1,0 +1,113 @@
+mutation addSession(
+    $totalLength: Int!,
+    $individualSubjects: [sessionSubjectInput!]!,
+    $notes: String,
+    $userID: String!,
+  ) {
+    addSession(
+        userID: $userID
+        totalLength: $totalLength
+        notes: $notes
+        individualSubjects: $individualSubjects
+  ) {
+      ...SessionItems
+    }
+  }
+  
+  mutation editUser($id: String!, $subjectNotes: subjectNotesInput!) {
+    editUser(
+      id: $id
+      subjectNotes: $subjectNotes
+    ) {
+      ...UserItems
+    }
+  }
+  
+  mutation addGoal($id: String!, $goal: goalInput!) {
+    addGoal(
+      id: $id,
+      goal: $goal,
+    ) {
+      ...UserItems
+    }
+  }
+  
+  mutation deleteSession($id: String!) {
+    deleteSession(id: $id) {
+      ...SessionItems
+    }
+  }
+  
+  mutation editGoal($userID: String!, $goalID: String!, $time: Int!) {
+    editGoal(userID: $userID, goalID: $goalID, time: $time) {
+    id
+    description
+    subject
+    targetTime
+    elapsedTime
+    deadline
+    passed
+  }
+}
+
+mutation deleteGoal($userID: String!, $goalID: String!) {
+    deleteGoal(userID: $userID, goalID: $goalID) {
+      ...UserItems
+    }
+  }
+  
+  mutation deleteSubject($name: String!) {
+    deleteSubject(name: $name) {
+      ...SubjectItems
+    }
+  }
+  
+  mutation deleteUser($id: String!) {
+    deleteUser(id: $id) {
+      id
+      username
+      instrument
+    }
+  }
+  
+  mutation logOut {
+    logOut
+  }
+  
+  mutation addUser($username: String!, $instrument: String, $password: String!) {
+    addUser(username: $username, password: $password, instrument: $instrument) {
+      id
+      username
+      instrument
+    }
+  }
+  
+  mutation addSubject($name: String!, $description: String, $userID: String, $links: SubjectLinkInput) {
+    addSubject(name: $name, description: $description, userID: $userID, links: $links) {
+      name
+      description
+      id
+      links {
+        url
+        description
+      }
+    }
+  }
+  
+  mutation addLink($url: String!, $description: String!, $subjectID: String!) {
+    addLink(url: $url, description: $description, subjectID: $subjectID) {
+      ...SubjectItems
+    }
+  }
+  
+  mutation login($username: String!, $password: String!) {
+    login(
+      username: $username
+      password: $password
+    ) {
+      token
+      user {
+        username
+      }
+    }
+  }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,29 @@
 		F20B7CBF26126A930076A843 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CBE26126A930076A843 /* ContentView.swift */; };
 		F20B7CC126126A950076A843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20B7CC026126A950076A843 /* Assets.xcassets */; };
 		F20B7CC426126A950076A843 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20B7CC326126A950076A843 /* Preview Assets.xcassets */; };
+		F20B7CD026126F390076A843 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CCF26126F390076A843 /* StopWatchManager.swift */; };
+		F20B7CD3261275FA0076A843 /* TimeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CD2261275FA0076A843 /* TimeParser.swift */; };
+		F20B7CDB26127F3A0076A843 /* MainTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CDA26127F3A0076A843 /* MainTimer.swift */; };
+		F20B7CDF261281470076A843 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CDE261281470076A843 /* Account.swift */; };
+		F23C5F4D261286C800EFBC40 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4C261286C800EFBC40 /* Goals.swift */; };
+		F23C5F50261286E400EFBC40 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4F261286E400EFBC40 /* History.swift */; };
+		F23C5F5426128B0D00EFBC40 /* subjects.json in Resources */ = {isa = PBXBuildFile; fileRef = F23C5F5326128B0D00EFBC40 /* subjects.json */; };
+		F23C5F5826128B7400EFBC40 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5726128B7400EFBC40 /* Subject.swift */; };
+		F23C5F5B26128BFE00EFBC40 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5A26128BFE00EFBC40 /* ModelData.swift */; };
+		F23C5F5E26128C6800EFBC40 /* SubjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5D26128C6800EFBC40 /* SubjectList.swift */; };
+		F240D5CB26164827003E0B13 /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F240D5CA26164827003E0B13 /* DateParser.swift */; };
+		F242952D26164FAF0010C1A1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242952C26164FAF0010C1A1 /* API.swift */; };
+		F24762F826165EF6000F23CD /* SubjectRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24762F726165EF6000F23CD /* SubjectRow.swift */; };
+		F24762FB2616625A000F23CD /* GoalRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24762FA2616625A000F23CD /* GoalRow.swift */; };
+		F26C457726152172006D951B /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = F26C457626152172006D951B /* Apollo */; };
+		F26C457926152172006D951B /* ApolloWebSocket in Frameworks */ = {isa = PBXBuildFile; productRef = F26C457826152172006D951B /* ApolloWebSocket */; };
+		F26C458D261529FB006D951B /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C458C261529FB006D951B /* Apollo.swift */; };
+		F2A6F4302613D0AA00C529C1 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6F42F2613D0AA00C529C1 /* LocalNotificationManager.swift */; };
+		F2A6F4332613EFF900C529C1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6F4322613EFF900C529C1 /* Session.swift */; };
+		F2A6F4362613F10700C529C1 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = F2A6F4352613F10700C529C1 /* sessions.json */; };
+		F2ACBE17261404D9005EE885 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACBE16261404D9005EE885 /* SessionRow.swift */; };
+		F2F47FB2261565ED00EC5283 /* Mutations.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F2F47FB1261565ED00EC5283 /* Mutations.graphql */; };
+		F2F47FB52615661300EC5283 /* Fragments.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F2F47FB42615661300EC5283 /* Fragments.graphql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +43,29 @@
 		F20B7CC026126A950076A843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20B7CC326126A950076A843 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F20B7CC526126A950076A843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F20B7CCF26126F390076A843 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
+		F20B7CD2261275FA0076A843 /* TimeParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeParser.swift; sourceTree = "<group>"; };
+		F20B7CDA26127F3A0076A843 /* MainTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimer.swift; sourceTree = "<group>"; };
+		F20B7CDE261281470076A843 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		F23C5F4C261286C800EFBC40 /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
+		F23C5F4F261286E400EFBC40 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		F23C5F5326128B0D00EFBC40 /* subjects.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = subjects.json; sourceTree = "<group>"; };
+		F23C5F5726128B7400EFBC40 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		F23C5F5A26128BFE00EFBC40 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		F23C5F5D26128C6800EFBC40 /* SubjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectList.swift; sourceTree = "<group>"; };
+		F240D5CA26164827003E0B13 /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
+		F242952C26164FAF0010C1A1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		F24762F726165EF6000F23CD /* SubjectRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectRow.swift; sourceTree = "<group>"; };
+		F24762FA2616625A000F23CD /* GoalRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalRow.swift; sourceTree = "<group>"; };
+		F26C457D261523A7006D951B /* schema.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		F26C458226152592006D951B /* Queries.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Queries.graphql; sourceTree = "<group>"; };
+		F26C458C261529FB006D951B /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
+		F2A6F42F2613D0AA00C529C1 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		F2A6F4322613EFF900C529C1 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		F2A6F4352613F10700C529C1 /* sessions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
+		F2ACBE16261404D9005EE885 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
+		F2F47FB1261565ED00EC5283 /* Mutations.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutations.graphql; sourceTree = "<group>"; };
+		F2F47FB42615661300EC5283 /* Fragments.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fragments.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +73,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F26C457726152172006D951B /* Apollo in Frameworks */,
+				F26C457926152172006D951B /* ApolloWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,11 +100,19 @@
 		F20B7CBB26126A930076A843 /* ShedApp */ = {
 			isa = PBXGroup;
 			children = (
+				F23C5F5626128B6500EFBC40 /* Model */,
+				F23C5F5226128A8E00EFBC40 /* Resources */,
 				F20B7CBC26126A930076A843 /* ShedAppApp.swift */,
-				F20B7CBE26126A930076A843 /* ContentView.swift */,
+				F20B7CDD261281310076A843 /* Views */,
 				F20B7CC026126A950076A843 /* Assets.xcassets */,
 				F20B7CC526126A950076A843 /* Info.plist */,
 				F20B7CC226126A950076A843 /* Preview Content */,
+				F20B7CCF26126F390076A843 /* StopWatchManager.swift */,
+				F26C457D261523A7006D951B /* schema.json */,
+				F26C458A261529C0006D951B /* GraphQL */,
+				F20B7CD2261275FA0076A843 /* TimeParser.swift */,
+				F240D5CA26164827003E0B13 /* DateParser.swift */,
+				F2A6F42F2613D0AA00C529C1 /* LocalNotificationManager.swift */,
 			);
 			path = ShedApp;
 			sourceTree = "<group>";
@@ -69,6 +125,53 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		F20B7CDD261281310076A843 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F20B7CBE26126A930076A843 /* ContentView.swift */,
+				F20B7CDA26127F3A0076A843 /* MainTimer.swift */,
+				F20B7CDE261281470076A843 /* Account.swift */,
+				F23C5F4C261286C800EFBC40 /* Goals.swift */,
+				F24762FA2616625A000F23CD /* GoalRow.swift */,
+				F23C5F4F261286E400EFBC40 /* History.swift */,
+				F23C5F5D26128C6800EFBC40 /* SubjectList.swift */,
+				F24762F726165EF6000F23CD /* SubjectRow.swift */,
+				F2ACBE16261404D9005EE885 /* SessionRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F23C5F5226128A8E00EFBC40 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F23C5F5326128B0D00EFBC40 /* subjects.json */,
+				F2A6F4352613F10700C529C1 /* sessions.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F23C5F5626128B6500EFBC40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F23C5F5726128B7400EFBC40 /* Subject.swift */,
+				F23C5F5A26128BFE00EFBC40 /* ModelData.swift */,
+				F2A6F4322613EFF900C529C1 /* Session.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F26C458A261529C0006D951B /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				F26C458226152592006D951B /* Queries.graphql */,
+				F242952C26164FAF0010C1A1 /* API.swift */,
+				F2F47FB1261565ED00EC5283 /* Mutations.graphql */,
+				F2F47FB42615661300EC5283 /* Fragments.graphql */,
+				F26C458C261529FB006D951B /* Apollo.swift */,
+			);
+			path = GraphQL;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,6 +179,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F20B7CC826126A950076A843 /* Build configuration list for PBXNativeTarget "ShedApp" */;
 			buildPhases = (
+				F26C457B261521DC006D951B /* Apollo CLI */,
 				F20B7CB526126A920076A843 /* Sources */,
 				F20B7CB626126A920076A843 /* Frameworks */,
 				F20B7CB726126A920076A843 /* Resources */,
@@ -85,6 +189,10 @@
 			dependencies = (
 			);
 			name = ShedApp;
+			packageProductDependencies = (
+				F26C457626152172006D951B /* Apollo */,
+				F26C457826152172006D951B /* ApolloWebSocket */,
+			);
 			productName = ShedApp;
 			productReference = F20B7CB926126A930076A843 /* ShedApp.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +220,9 @@
 				Base,
 			);
 			mainGroup = F20B7CB026126A920076A843;
+			packageReferences = (
+				F26C457526152172006D951B /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
 			productRefGroup = F20B7CBA26126A930076A843 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,20 +237,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2A6F4362613F10700C529C1 /* sessions.json in Resources */,
+				F2F47FB52615661300EC5283 /* Fragments.graphql in Resources */,
 				F20B7CC426126A950076A843 /* Preview Assets.xcassets in Resources */,
 				F20B7CC126126A950076A843 /* Assets.xcassets in Resources */,
+				F23C5F5426128B0D00EFBC40 /* subjects.json in Resources */,
+				F2F47FB2261565ED00EC5283 /* Mutations.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F26C457B261521DC006D951B /* Apollo CLI */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Apollo CLI";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Go to the build root and search up the chain to find the Derived Data Path where the source packages are checked out.\nDERIVED_DATA_CANDIDATE=\"${BUILD_ROOT}\"\n\nwhile ! [ -d \"${DERIVED_DATA_CANDIDATE}/SourcePackages\" ]; do\n  if [ \"${DERIVED_DATA_CANDIDATE}\" = / ]; then\n    echo >&2 \"error: Unable to locate SourcePackages directory from BUILD_ROOT: '${BUILD_ROOT}'\"\n    exit 1\n  fi\n\n  DERIVED_DATA_CANDIDATE=\"$(dirname \"${DERIVED_DATA_CANDIDATE}\")\"\ndone\n\n# Grab a reference to the directory where scripts are checked out\nSCRIPT_PATH=\"${DERIVED_DATA_CANDIDATE}/SourcePackages/checkouts/apollo-ios/scripts\"\n\nif [ -z \"${SCRIPT_PATH}\" ]; then\n    echo >&2 \"error: Couldn't find the CLI script in your checked out SPM packages; make sure to add the framework to your project.\"\n    exit 1\nfi\n\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/*.graphql --localSchemaFile=\"schema.json\" API.swift\n\n# \"${SCRIPT_PATH}\"/run-bundled-codegen.sh schema:download --endpoint=\"https://shed-app-api.herokuapp.com/graphql\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F20B7CB526126A920076A843 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F23C5F4D261286C800EFBC40 /* Goals.swift in Sources */,
+				F2ACBE17261404D9005EE885 /* SessionRow.swift in Sources */,
+				F20B7CD026126F390076A843 /* StopWatchManager.swift in Sources */,
+				F23C5F50261286E400EFBC40 /* History.swift in Sources */,
+				F24762FB2616625A000F23CD /* GoalRow.swift in Sources */,
+				F240D5CB26164827003E0B13 /* DateParser.swift in Sources */,
+				F20B7CDB26127F3A0076A843 /* MainTimer.swift in Sources */,
 				F20B7CBF26126A930076A843 /* ContentView.swift in Sources */,
+				F20B7CD3261275FA0076A843 /* TimeParser.swift in Sources */,
+				F2A6F4302613D0AA00C529C1 /* LocalNotificationManager.swift in Sources */,
+				F2A6F4332613EFF900C529C1 /* Session.swift in Sources */,
 				F20B7CBD26126A930076A843 /* ShedAppApp.swift in Sources */,
+				F23C5F5B26128BFE00EFBC40 /* ModelData.swift in Sources */,
+				F242952D26164FAF0010C1A1 /* API.swift in Sources */,
+				F23C5F5E26128C6800EFBC40 /* SubjectList.swift in Sources */,
+				F23C5F5826128B7400EFBC40 /* Subject.swift in Sources */,
+				F26C458D261529FB006D951B /* Apollo.swift in Sources */,
+				F20B7CDF261281470076A843 /* Account.swift in Sources */,
+				F24762F826165EF6000F23CD /* SubjectRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +479,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F26C457526152172006D951B /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.42.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F26C457626152172006D951B /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F26C457526152172006D951B /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+		F26C457826152172006D951B /* ApolloWebSocket */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F26C457526152172006D951B /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = ApolloWebSocket;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F20B7CB126126A920076A843 /* Project object */;
 }
