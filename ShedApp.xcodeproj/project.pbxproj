@@ -17,9 +17,8 @@
 		F20B7CDF261281470076A843 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CDE261281470076A843 /* Account.swift */; };
 		F23C5F4D261286C800EFBC40 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4C261286C800EFBC40 /* Goals.swift */; };
 		F23C5F50261286E400EFBC40 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4F261286E400EFBC40 /* History.swift */; };
-		F23C5F5426128B0D00EFBC40 /* subjects.json in Resources */ = {isa = PBXBuildFile; fileRef = F23C5F5326128B0D00EFBC40 /* subjects.json */; };
 		F23C5F5826128B7400EFBC40 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5726128B7400EFBC40 /* Subject.swift */; };
-		F23C5F5B26128BFE00EFBC40 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5A26128BFE00EFBC40 /* ModelData.swift */; };
+		F23C5F5B26128BFE00EFBC40 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5A26128BFE00EFBC40 /* Data.swift */; };
 		F23C5F5E26128C6800EFBC40 /* SubjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5D26128C6800EFBC40 /* SubjectList.swift */; };
 		F240D5CB26164827003E0B13 /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F240D5CA26164827003E0B13 /* DateParser.swift */; };
 		F242952D26164FAF0010C1A1 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242952C26164FAF0010C1A1 /* API.swift */; };
@@ -30,7 +29,6 @@
 		F26C458D261529FB006D951B /* Apollo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26C458C261529FB006D951B /* Apollo.swift */; };
 		F2A6F4302613D0AA00C529C1 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6F42F2613D0AA00C529C1 /* LocalNotificationManager.swift */; };
 		F2A6F4332613EFF900C529C1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6F4322613EFF900C529C1 /* Session.swift */; };
-		F2A6F4362613F10700C529C1 /* sessions.json in Resources */ = {isa = PBXBuildFile; fileRef = F2A6F4352613F10700C529C1 /* sessions.json */; };
 		F2ACBE17261404D9005EE885 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACBE16261404D9005EE885 /* SessionRow.swift */; };
 		F2F47FB2261565ED00EC5283 /* Mutations.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F2F47FB1261565ED00EC5283 /* Mutations.graphql */; };
 		F2F47FB52615661300EC5283 /* Fragments.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F2F47FB42615661300EC5283 /* Fragments.graphql */; };
@@ -49,9 +47,8 @@
 		F20B7CDE261281470076A843 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		F23C5F4C261286C800EFBC40 /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		F23C5F4F261286E400EFBC40 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		F23C5F5326128B0D00EFBC40 /* subjects.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = subjects.json; sourceTree = "<group>"; };
 		F23C5F5726128B7400EFBC40 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
-		F23C5F5A26128BFE00EFBC40 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		F23C5F5A26128BFE00EFBC40 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		F23C5F5D26128C6800EFBC40 /* SubjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectList.swift; sourceTree = "<group>"; };
 		F240D5CA26164827003E0B13 /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
 		F242952C26164FAF0010C1A1 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -62,7 +59,6 @@
 		F26C458C261529FB006D951B /* Apollo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Apollo.swift; sourceTree = "<group>"; };
 		F2A6F42F2613D0AA00C529C1 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		F2A6F4322613EFF900C529C1 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
-		F2A6F4352613F10700C529C1 /* sessions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sessions.json; sourceTree = "<group>"; };
 		F2ACBE16261404D9005EE885 /* SessionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRow.swift; sourceTree = "<group>"; };
 		F2F47FB1261565ED00EC5283 /* Mutations.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Mutations.graphql; sourceTree = "<group>"; };
 		F2F47FB42615661300EC5283 /* Fragments.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Fragments.graphql; sourceTree = "<group>"; };
@@ -101,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				F23C5F5626128B6500EFBC40 /* Model */,
-				F23C5F5226128A8E00EFBC40 /* Resources */,
 				F20B7CBC26126A930076A843 /* ShedAppApp.swift */,
 				F20B7CDD261281310076A843 /* Views */,
 				F20B7CC026126A950076A843 /* Assets.xcassets */,
@@ -141,20 +136,11 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F23C5F5226128A8E00EFBC40 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F23C5F5326128B0D00EFBC40 /* subjects.json */,
-				F2A6F4352613F10700C529C1 /* sessions.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		F23C5F5626128B6500EFBC40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				F23C5F5726128B7400EFBC40 /* Subject.swift */,
-				F23C5F5A26128BFE00EFBC40 /* ModelData.swift */,
+				F23C5F5A26128BFE00EFBC40 /* Data.swift */,
 				F2A6F4322613EFF900C529C1 /* Session.swift */,
 			);
 			path = Model;
@@ -237,11 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A6F4362613F10700C529C1 /* sessions.json in Resources */,
 				F2F47FB52615661300EC5283 /* Fragments.graphql in Resources */,
 				F20B7CC426126A950076A843 /* Preview Assets.xcassets in Resources */,
 				F20B7CC126126A950076A843 /* Assets.xcassets in Resources */,
-				F23C5F5426128B0D00EFBC40 /* subjects.json in Resources */,
 				F2F47FB2261565ED00EC5283 /* Mutations.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +270,7 @@
 				F2A6F4302613D0AA00C529C1 /* LocalNotificationManager.swift in Sources */,
 				F2A6F4332613EFF900C529C1 /* Session.swift in Sources */,
 				F20B7CBD26126A930076A843 /* ShedAppApp.swift in Sources */,
-				F23C5F5B26128BFE00EFBC40 /* ModelData.swift in Sources */,
+				F23C5F5B26128BFE00EFBC40 /* Data.swift in Sources */,
 				F242952D26164FAF0010C1A1 /* API.swift in Sources */,
 				F23C5F5E26128C6800EFBC40 /* SubjectList.swift in Sources */,
 				F23C5F5826128B7400EFBC40 /* Subject.swift in Sources */,

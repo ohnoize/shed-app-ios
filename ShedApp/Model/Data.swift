@@ -9,11 +9,6 @@ import Foundation
 import Combine
 import Apollo
 
-final class ModelData: ObservableObject {
-    @Published var subjects: [Subject] = load("subjects.json")
-    @Published var sessions: [Session] = load("sessions.json")
-}
-
 final class GraphQLData: ObservableObject {
     @Published var subjects = [GetSubjectsQuery.Data.AllSubject]()
     @Published var sessions = [GetSessionsQuery.Data.AllSession]()

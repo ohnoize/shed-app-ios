@@ -34,6 +34,5 @@ struct SubjectList: View {
 struct SubjectList_Previews: PreviewProvider {
     static var previews: some View {
         SubjectList()
-            .environmentObject(ModelData())
     }
 }

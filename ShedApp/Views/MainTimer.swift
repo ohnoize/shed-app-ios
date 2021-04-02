@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainTimer: View {
     @ObservedObject var stopWatchManager = StopWatchManager()
-    @ObservedObject var modelData = ModelData()
     @ObservedObject var graphQLData = GraphQLData()
     @ObservedObject var notificationManager = LocalNotificationManager()
     
@@ -176,6 +175,5 @@ struct MainTimer: View {
 struct MainTimer_Previews: PreviewProvider {
     static var previews: some View {
         MainTimer()
-            .environmentObject(ModelData())
     }
 }
