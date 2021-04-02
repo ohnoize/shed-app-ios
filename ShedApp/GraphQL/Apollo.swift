@@ -5,6 +5,7 @@
 //  Created by Olli Hirvonen on 3/31/21.
 //
 
+import KeychainSwift
 import Foundation
 import Apollo
 
@@ -38,8 +39,10 @@ class CustomInterceptor: ApolloInterceptor {
         request: HTTPRequest<Operation>,
         response: HTTPResponse<Operation>?,
         completion: @escaping (Swift.Result<GraphQLResult<Operation.Data>, Error>) -> Void) {
-        request.addHeader(name: "Authorization", value: ProcessInfo.processInfo.environment["env-token"]!)
-        
+        let keychain = KeychainSwift()
+        if let token = keychain.get("TOKEN_HERE") {
+            request.addHeader(name: "Authorization", value: token)
+        }
         print("request :\(request)")
         print("response :\(String(describing: response))")
 

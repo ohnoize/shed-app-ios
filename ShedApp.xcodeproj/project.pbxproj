@@ -30,6 +30,7 @@
 		F2A6F4302613D0AA00C529C1 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6F42F2613D0AA00C529C1 /* LocalNotificationManager.swift */; };
 		F2A6F4332613EFF900C529C1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6F4322613EFF900C529C1 /* Session.swift */; };
 		F2ACBE17261404D9005EE885 /* SessionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2ACBE16261404D9005EE885 /* SessionRow.swift */; };
+		F2D048602616C56A0021F98F /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F2D0485F2616C56A0021F98F /* KeychainSwift */; };
 		F2F47FB2261565ED00EC5283 /* Mutations.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F2F47FB1261565ED00EC5283 /* Mutations.graphql */; };
 		F2F47FB52615661300EC5283 /* Fragments.graphql in Resources */ = {isa = PBXBuildFile; fileRef = F2F47FB42615661300EC5283 /* Fragments.graphql */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D048602616C56A0021F98F /* KeychainSwift in Frameworks */,
 				F26C457726152172006D951B /* Apollo in Frameworks */,
 				F26C457926152172006D951B /* ApolloWebSocket in Frameworks */,
 			);
@@ -178,6 +180,7 @@
 			packageProductDependencies = (
 				F26C457626152172006D951B /* Apollo */,
 				F26C457826152172006D951B /* ApolloWebSocket */,
+				F2D0485F2616C56A0021F98F /* KeychainSwift */,
 			);
 			productName = ShedApp;
 			productReference = F20B7CB926126A930076A843 /* ShedApp.app */;
@@ -208,6 +211,7 @@
 			mainGroup = F20B7CB026126A920076A843;
 			packageReferences = (
 				F26C457526152172006D951B /* XCRemoteSwiftPackageReference "apollo-ios" */,
+				F2D0485E2616C56A0021F98F /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = F20B7CBA26126A930076A843 /* Products */;
 			projectDirPath = "";
@@ -473,6 +477,14 @@
 				minimumVersion = 0.42.0;
 			};
 		};
+		F2D0485E2616C56A0021F98F /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -485,6 +497,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F26C457526152172006D951B /* XCRemoteSwiftPackageReference "apollo-ios" */;
 			productName = ApolloWebSocket;
+		};
+		F2D0485F2616C56A0021F98F /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2D0485E2616C56A0021F98F /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
