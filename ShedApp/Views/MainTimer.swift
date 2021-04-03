@@ -50,11 +50,29 @@ struct MainTimer: View {
     func handleStop(seconds: Int) {
         self.stopWatchManager.stop()
         practiceTime.totalTime += seconds
+        let userID = graphQLData.currentUser.compactMap({ $0.id })
         if let index = practiceTime.individualSubjects.map({$0.name}).firstIndex(of: subject) {
             practiceTime.individualSubjects[index].length += seconds
         } else {
             practiceTime.individualSubjects.append(SessionSubject(name: subject, length: seconds))
         }
+        for user in graphQLData.currentUser {
+            if let goals = user.goals?.compactMap({ $0 }) {
+                if let i = goals.compactMap({ $0.subject }).firstIndex(of: subject) {
+                    editGoal(seconds: seconds, userID: userID[0], goalID: goals[i].id)
+                }
+            }
+        }
+    }
+    
+    func editGoal(seconds: Int, userID: String, goalID: String) {
+        Network.shared.apollo.perform(
+            mutation: EditGoalMutation(
+                userID: userID,
+                goalID: goalID,
+                time: seconds
+            )
+        )
     }
     
     @State private var showingConfirm = false

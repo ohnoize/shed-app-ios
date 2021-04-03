@@ -36,7 +36,7 @@ struct ContentView: View {
                     Label("My Subjects", systemImage: "folder.fill")
                 }
                 .tag(Tab.subjects)
-            History()
+            SessionList()
                 .tabItem {
                     Label("My Sessions", systemImage: "book.fill")
                 }

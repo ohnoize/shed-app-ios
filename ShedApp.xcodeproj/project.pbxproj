@@ -16,8 +16,9 @@
 		F20B7CDB26127F3A0076A843 /* MainTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CDA26127F3A0076A843 /* MainTimer.swift */; };
 		F20B7CDF261281470076A843 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20B7CDE261281470076A843 /* Account.swift */; };
 		F23520252617CB9F00C83B15 /* AddNewGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23520242617CB9F00C83B15 /* AddNewGoal.swift */; };
+		F235202A2617FDE300C83B15 /* AddSubject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23520292617FDE300C83B15 /* AddSubject.swift */; };
 		F23C5F4D261286C800EFBC40 /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4C261286C800EFBC40 /* Goals.swift */; };
-		F23C5F50261286E400EFBC40 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4F261286E400EFBC40 /* History.swift */; };
+		F23C5F50261286E400EFBC40 /* SessionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F4F261286E400EFBC40 /* SessionList.swift */; };
 		F23C5F5826128B7400EFBC40 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5726128B7400EFBC40 /* Subject.swift */; };
 		F23C5F5B26128BFE00EFBC40 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5A26128BFE00EFBC40 /* Data.swift */; };
 		F23C5F5E26128C6800EFBC40 /* SubjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23C5F5D26128C6800EFBC40 /* SubjectList.swift */; };
@@ -48,8 +49,9 @@
 		F20B7CDA26127F3A0076A843 /* MainTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTimer.swift; sourceTree = "<group>"; };
 		F20B7CDE261281470076A843 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		F23520242617CB9F00C83B15 /* AddNewGoal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewGoal.swift; sourceTree = "<group>"; };
+		F23520292617FDE300C83B15 /* AddSubject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubject.swift; sourceTree = "<group>"; };
 		F23C5F4C261286C800EFBC40 /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
-		F23C5F4F261286E400EFBC40 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		F23C5F4F261286E400EFBC40 /* SessionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionList.swift; sourceTree = "<group>"; };
 		F23C5F5726128B7400EFBC40 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		F23C5F5A26128BFE00EFBC40 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		F23C5F5D26128C6800EFBC40 /* SubjectList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectList.swift; sourceTree = "<group>"; };
@@ -132,9 +134,8 @@
 				F20B7CDA26127F3A0076A843 /* MainTimer.swift */,
 				F20B7CDE261281470076A843 /* Account.swift */,
 				F23520222617CB8D00C83B15 /* Goals */,
-				F23C5F4F261286E400EFBC40 /* History.swift */,
-				F23C5F5D26128C6800EFBC40 /* SubjectList.swift */,
-				F24762F726165EF6000F23CD /* SubjectRow.swift */,
+				F23C5F4F261286E400EFBC40 /* SessionList.swift */,
+				F23520272617FD3800C83B15 /* Subjects */,
 				F2ACBE16261404D9005EE885 /* SessionRow.swift */,
 			);
 			path = Views;
@@ -148,6 +149,16 @@
 				F23520242617CB9F00C83B15 /* AddNewGoal.swift */,
 			);
 			path = Goals;
+			sourceTree = "<group>";
+		};
+		F23520272617FD3800C83B15 /* Subjects */ = {
+			isa = PBXGroup;
+			children = (
+				F23C5F5D26128C6800EFBC40 /* SubjectList.swift */,
+				F24762F726165EF6000F23CD /* SubjectRow.swift */,
+				F23520292617FDE300C83B15 /* AddSubject.swift */,
+			);
+			path = Subjects;
 			sourceTree = "<group>";
 		};
 		F23C5F5626128B6500EFBC40 /* Model */ = {
@@ -277,13 +288,14 @@
 				F2D048642616C9EB0021F98F /* API.swift in Sources */,
 				F2ACBE17261404D9005EE885 /* SessionRow.swift in Sources */,
 				F20B7CD026126F390076A843 /* StopWatchManager.swift in Sources */,
-				F23C5F50261286E400EFBC40 /* History.swift in Sources */,
+				F23C5F50261286E400EFBC40 /* SessionList.swift in Sources */,
 				F24762FB2616625A000F23CD /* GoalRow.swift in Sources */,
 				F240D5CB26164827003E0B13 /* DateParser.swift in Sources */,
 				F20B7CDB26127F3A0076A843 /* MainTimer.swift in Sources */,
 				F20B7CBF26126A930076A843 /* ContentView.swift in Sources */,
 				F20B7CD3261275FA0076A843 /* TimeParser.swift in Sources */,
 				F2A6F4302613D0AA00C529C1 /* LocalNotificationManager.swift in Sources */,
+				F235202A2617FDE300C83B15 /* AddSubject.swift in Sources */,
 				F2A6F4332613EFF900C529C1 /* Session.swift in Sources */,
 				F20B7CBD26126A930076A843 /* ShedAppApp.swift in Sources */,
 				F23520252617CB9F00C83B15 /* AddNewGoal.swift in Sources */,

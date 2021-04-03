@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct History: View {
+struct SessionList: View {
     @EnvironmentObject var graphQLData: GraphQLData
     @State var currentUser = [CurrentUserQuery.Data.Me]()
     var body: some View {
@@ -36,12 +36,5 @@ struct History: View {
                 }
             }
         }
-    }
-}
-
-struct History_Previews: PreviewProvider {
-    static var previews: some View {
-        History()
-            .environmentObject(GraphQLData())
     }
 }
