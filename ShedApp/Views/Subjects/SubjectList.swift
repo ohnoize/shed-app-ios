@@ -9,16 +9,14 @@ import SwiftUI
 
 struct SubjectList: View {
     @ObservedObject var graphQLData = GraphQLData()
-    @State var currentUser = [CurrentUserQuery.Data.Me]()
+    @State var currentUser: CurrentUserQuery.Data.Me?
     @State var addSubjectShowing = false
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(currentUser, id: \.id) { user in
-                    if let subjects = user.mySubjects?.compactMap { $0 } {
-                        ForEach(subjects, id: \.subjectName) { subject in
-                            SubjectRow(subject: subject)
-                        }
+                if let subjects = currentUser?.mySubjects?.sorted { $0!.timePracticed > $1!.timePracticed }.compactMap { $0 } {
+                    ForEach(subjects, id: \.subjectName) { subject in
+                        SubjectRow(subject: subject)
                     }
                 }
             }
@@ -36,7 +34,7 @@ struct SubjectList: View {
                             switch result {
                             case .success(let result):
                                 if let userConnection = result.data?.me {
-                                    currentUser = [userConnection].compactMap { $0 }
+                                    currentUser = userConnection
                                 }
                             case .failure(let error):
                                 print("GraphQL Error: \(error)")
@@ -50,7 +48,7 @@ struct SubjectList: View {
                 switch result {
                 case .success(let result):
                     if let userConnection = result.data?.me {
-                        currentUser = [userConnection].compactMap { $0 }
+                        currentUser = userConnection
                     }
                 case .failure(let error):
                     print("GraphQL Error: \(error)")

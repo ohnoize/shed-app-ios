@@ -9,10 +9,11 @@ import SwiftUI
 
 struct Account: View {
     @EnvironmentObject var graphQLData: GraphQLData
+    @State var currentUser = [CurrentUserQuery.Data.Me]()
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(graphQLData.currentUser, id: \.id) { user in
+                ForEach(currentUser, id: \.id) { user in
                     HStack {
                         VStack(alignment:.leading) {
                             Text(user.username)
@@ -28,6 +29,18 @@ struct Account: View {
                 }
             }
             .navigationTitle("My Account")
+        }
+        .onAppear {
+            Network.shared.apollo.fetch(query: CurrentUserQuery(), cachePolicy: .fetchIgnoringCacheCompletely)  { result in
+                switch result {
+                case .success(let result):
+                    if let userConnection = result.data?.me {
+                        currentUser = [userConnection].compactMap { $0 }
+                    }
+                case .failure(let error):
+                    print("GraphQL Error: \(error)")
+                }
+            }
         }
     }
 }

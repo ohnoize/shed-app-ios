@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 let inDateFormatter: DateFormatter = {
     let dtf = DateFormatter()
     dtf.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
@@ -27,11 +28,15 @@ let outDateFormatter: DateFormatter = {
 }()
 
 func DateParser(dateString: String) -> String {
-
     let formattedString: String
-    guard let date = inDateFormatter.date(from: dateString) else {
-        return dateString;
+    let date: Date
+    if dateString.count == 20 {
+        date  = altDateFormatter.date(from: dateString) ?? Date()
     }
+    else {
+        date = inDateFormatter.date(from: dateString) ?? Date()
+    }
+    
     formattedString = outDateFormatter.string(from: date)
     return formattedString
 }

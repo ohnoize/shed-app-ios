@@ -17,12 +17,14 @@ final class GraphQLData: ObservableObject {
     
     
     init() {
+        let keychain = KeychainSwift()
+        
         Network.shared.apollo.perform(mutation: LoginMutation(username: "testUser", password: "testPassword")) { result in
+            keychain.delete("authToken")
             switch result {
             case .success(let result):
                 print(result)
                 if let token = result.data?.login?.token {
-                    let keychain = KeychainSwift()
                     keychain.set(token, forKey: "authToken")
                 }
             case .failure(let error):

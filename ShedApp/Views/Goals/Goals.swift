@@ -9,16 +9,14 @@ import SwiftUI
 
 struct Goals: View {
     @EnvironmentObject var graphQLData: GraphQLData
-    @State var currentUser = [CurrentUserQuery.Data.Me]()
+    @State var currentUser: CurrentUserQuery.Data.Me?
     @State private var addGoalShowing = false
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(currentUser, id: \.id) { user in
-                    if let goals = user.goals?.compactMap { $0 } {
-                        ForEach(goals, id: \.id) { goal in
-                            GoalRow(goal: goal)
-                        }
+                if let goals = currentUser?.goals?.compactMap { $0 } {
+                    ForEach(goals, id: \.id) { goal in
+                        GoalRow(goal: goal)
                     }
                 }
             }
@@ -36,7 +34,7 @@ struct Goals: View {
                             switch result {
                             case .success(let result):
                                 if let userConnection = result.data?.me {
-                                    currentUser = [userConnection].compactMap { $0 }
+                                    currentUser = userConnection
                                 }
                             case .failure(let error):
                                 print("GraphQL Error: \(error)")
@@ -50,7 +48,7 @@ struct Goals: View {
                 switch result {
                 case .success(let result):
                     if let userConnection = result.data?.me {
-                        currentUser = [userConnection].compactMap { $0 }
+                        currentUser = userConnection
                     }
                 case .failure(let error):
                     print("GraphQL Error: \(error)")

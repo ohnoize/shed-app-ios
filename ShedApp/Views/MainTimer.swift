@@ -10,6 +10,8 @@ import SwiftUI
 struct MainTimer: View {
     @ObservedObject var stopWatchManager = StopWatchManager()
     @EnvironmentObject var graphQLData: GraphQLData
+    @State var currentUser = [CurrentUserQuery.Data.Me]()
+    @State var subjects = [CurrentUserQuery.Data.Me.MySubject?]()
     @ObservedObject var notificationManager = LocalNotificationManager()
     
     struct SessionSubject: Identifiable, Hashable {
@@ -50,13 +52,14 @@ struct MainTimer: View {
     func handleStop(seconds: Int) {
         self.stopWatchManager.stop()
         practiceTime.totalTime += seconds
-        let userID = graphQLData.currentUser.compactMap({ $0.id })
+        let userID = currentUser.compactMap({ $0.id })
+        print(userID)
         if let index = practiceTime.individualSubjects.map({$0.name}).firstIndex(of: subject) {
             practiceTime.individualSubjects[index].length += seconds
         } else {
             practiceTime.individualSubjects.append(SessionSubject(name: subject, length: seconds))
         }
-        for user in graphQLData.currentUser {
+        for user in currentUser {
             if let goals = user.goals?.compactMap({ $0 }) {
                 if let i = goals.compactMap({ $0.subject }).firstIndex(of: subject) {
                     editGoal(seconds: seconds, userID: userID[0], goalID: goals[i].id)
@@ -108,88 +111,108 @@ struct MainTimer: View {
     
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("Shed App")
-                    .font(.largeTitle)
-                    .padding(.top, 100)
-                    .padding(.bottom, 100)
-                
-                if stopWatchManager.mode != .running {
-                    if subject == "" {
-                        Picker("Pick a subject", selection: $subject) {
-                            ForEach(graphQLData.subjects.compactMap({ $0.name }), id: \.self) { subject in
-                                Text(subject).tag(subject)
+        NavigationView {
+            ScrollView {
+                VStack {
+                    Text("Shed App")
+                        .font(.largeTitle)
+                        .padding(.top, 100)
+                        .padding(.bottom, 100)
+                    
+                    if stopWatchManager.mode != .running {
+                        if subject == "" {
+                            Picker("Pick a subject", selection: $subject) {
+                                ForEach(subjects.compactMap({ $0?.subjectName }), id: \.self) { subject in
+                                    Text(subject).tag(subject)
+                                }
                             }
-                        }
-                        .pickerStyle(MenuPickerStyle())
-                        .padding()
-                    } else {
-                        Picker("Change", selection: $subject) {
-                            ForEach(graphQLData.subjects.compactMap({ $0.name }), id: \.self) { subject in
-                                Text(subject).tag(subject)
-                            }
-                        }
-                        .pickerStyle(MenuPickerStyle())
-                        .padding()
-                        
-                        Text(subject)
-                            .font(.title2)
+                            .pickerStyle(MenuPickerStyle())
                             .padding()
-                    }
-                }
-                HStack {
-                    if stopWatchManager.mode == .stopped && subject != "" {
-                        Button("Start") {
-                            handleStart()
-                        }
-                        .alert(isPresented: $showingError) {
-                            Alert(
-                                title: Text("Pick a subject first"),
-                                dismissButton: .default(Text("Ok"))
-                            )
-                        }
-                        .padding()
-                    }
-                    if stopWatchManager.mode == .running {
-                        VStack(alignment: .center) {
-                            Text("Now practicing \(subject)")
-                            Text(TimeParser(seconds: stopWatchManager.secondsElapsed))
-                                .font(.subheadline)
-                                .padding()
+                        } else {
+                            Picker("Change", selection: $subject) {
+                                ForEach(subjects.compactMap({ $0?.subjectName }), id: \.self) { subject in
+                                    Text(subject).tag(subject)
+                                }
+                            }
+                            .pickerStyle(MenuPickerStyle())
+                            .padding()
                             
-                            Button("Stop") {
-                                handleStop(seconds: stopWatchManager.secondsElapsed)
+                            Text(subject)
+                                .font(.title2)
+                                .padding()
+                        }
+                    }
+                    HStack {
+                        if stopWatchManager.mode == .stopped && subject != "" {
+                            Button("Start") {
+                                handleStart()
+                            }
+                            .alert(isPresented: $showingError) {
+                                Alert(
+                                    title: Text("Pick a subject first"),
+                                    dismissButton: .default(Text("Ok"))
+                                )
                             }
                             .padding()
                         }
-                    }
-                    if stopWatchManager.mode == .stopped && practiceTime.totalTime > 0 {
-                        Button("Finish") {
-                            showingConfirm = true
+                        if stopWatchManager.mode == .running {
+                            VStack(alignment: .center) {
+                                Text("Now practicing \(subject)")
+                                Text(TimeParser(seconds: stopWatchManager.secondsElapsed))
+                                    .font(.subheadline)
+                                    .padding()
+                                
+                                Button("Stop") {
+                                    handleStop(seconds: stopWatchManager.secondsElapsed)
+                                }
+                                .padding()
+                            }
                         }
-                        .alert(isPresented: $showingConfirm) {
-                            Alert(
-                                title: Text("Are you sure you want to finish the session?"),
-                                primaryButton: .default(Text("Finish")) {
-                                    handleFinish()
-                                },
-                                secondaryButton: .cancel()
-                            )
+                        if stopWatchManager.mode == .stopped && practiceTime.totalTime > 0 {
+                            Button("Finish") {
+                                showingConfirm = true
+                            }
+                            .alert(isPresented: $showingConfirm) {
+                                Alert(
+                                    title: Text("Are you sure you want to finish the session?"),
+                                    primaryButton: .default(Text("Finish")) {
+                                        handleFinish()
+                                    },
+                                    secondaryButton: .cancel()
+                                )
+                            }
+                            .padding()
                         }
-                        .padding()
+                        
                     }
                     
-                }
-                
-                if practiceTime.individualSubjects.count > 0 {
-                    ForEach(practiceTime.individualSubjects, id: \.self) { subject in
-                        Text("\(subject.name) \(String(TimeParser(seconds: subject.length)))")
+                    if practiceTime.individualSubjects.count > 0 {
+                        ForEach(practiceTime.individualSubjects, id: \.self) { subject in
+                            Text("\(subject.name) \(String(TimeParser(seconds: subject.length)))")
+                        }
+                        Text("Total time practiced: \(String(TimeParser(seconds: practiceTime.totalTime)))")
+                            .padding(.top, 10)
                     }
-                    Text("Total time practiced: \(String(TimeParser(seconds: practiceTime.totalTime)))")
-                        .padding(.top, 10)
+                }
+                .onAppear {
+                    Network.shared.apollo.fetch(query: CurrentUserQuery(), cachePolicy: .fetchIgnoringCacheCompletely)  { result in
+                        switch result {
+                        case .success(let result):
+                            if let userConnection = result.data?.me {
+                                print(userConnection)
+                                currentUser = [userConnection].compactMap { $0 }
+                            }
+                            if let subjectsConnection = result.data?.me?.mySubjects {
+                                subjects = subjectsConnection
+                            }
+                        case .failure(let error):
+                            print("GraphQL Error: \(error)")
+                        }
+                    }
                 }
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
 }

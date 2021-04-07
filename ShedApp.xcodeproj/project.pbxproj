@@ -134,9 +134,8 @@
 				F20B7CDA26127F3A0076A843 /* MainTimer.swift */,
 				F20B7CDE261281470076A843 /* Account.swift */,
 				F23520222617CB8D00C83B15 /* Goals */,
-				F23C5F4F261286E400EFBC40 /* SessionList.swift */,
+				F2E80284261BD2B700617A58 /* Sessions */,
 				F23520272617FD3800C83B15 /* Subjects */,
-				F2ACBE16261404D9005EE885 /* SessionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +179,15 @@
 				F26C458C261529FB006D951B /* Apollo.swift */,
 			);
 			path = GraphQL;
+			sourceTree = "<group>";
+		};
+		F2E80284261BD2B700617A58 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				F23C5F4F261286E400EFBC40 /* SessionList.swift */,
+				F2ACBE16261404D9005EE885 /* SessionRow.swift */,
+			);
+			path = Sessions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
